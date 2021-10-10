@@ -1,0 +1,28 @@
+.title-header{
+    background-color: aqua;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* .title-header .navlinks{ 
+     display: inline;
+ } */
+
+.title-header .navlinks .list-items{
+    list-style: none;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.title-header .list-items li{
+    display: inline;
+    margin-right: 20px;
+}
+
+.title-header .list-items li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: black;
+}
