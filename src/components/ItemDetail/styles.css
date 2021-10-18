@@ -1,0 +1,18 @@
+.description-text{
+    width: 40%;
+    text-align: center;
+}
+
+.product .product-list{
+    list-style: none;
+}
+
+.product .btn{
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+.product .cart-btn{
+    background-color: orange;
+    cursor: pointer;
+}

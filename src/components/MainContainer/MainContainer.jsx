@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 class MainContainer extends Component {
@@ -23,6 +24,7 @@ class MainContainer extends Component {
   }
 
   render() {
+    const path = process.env.PUBLIC_URL;
     const { items, dataLoaded } = this.state;
     if (!dataLoaded) return <div>Loading.. Please Wait..</div>;
 
@@ -38,13 +40,20 @@ class MainContainer extends Component {
         <div className="products">
           {items.map((item) => (
             <ol className="product-list">
-              <li className="product-name"> {item.title}</li>
-              <li>
-                <img src={item.image} />
-              </li>
+              <Link to={`products/${item.id}`}>
+                <li className="product-name"> {item.title}</li>
+              </Link>
+              <Link to={`products/${item.id}`}>
+                <li>
+                  <img src={item.image} />
+                </li>
+              </Link>
               Price:<li className="product-price"> {item.price}</li>
               Description:
               <li className="product-description"> {item.description}</li>
+              <li>
+                <button className="cart-btn">Add to Cart</button>
+              </li>
               <li>
                 <button className="btn">Buy Now</button>
               </li>
